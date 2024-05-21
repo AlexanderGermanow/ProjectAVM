@@ -1,0 +1,51 @@
+package avm.products;
+
+/**
+ * AIT-TR, cohort 42.1, Java Basic, Project AVM/General
+ * @author Andrey Hein
+ * @version May-2024
+ */
+
+public abstract class BaseProduct {
+    protected Integer id;
+    protected String name;
+    protected float price;
+    protected int quantity;
+
+    public BaseProduct(String name, int quantity, float price) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "[id: " + id +
+                ", Product: " + name +
+                ", Price: " + price + " EUR]";
+    }
+}
